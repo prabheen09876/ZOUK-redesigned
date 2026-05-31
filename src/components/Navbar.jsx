@@ -33,21 +33,11 @@ export default function Navbar() {
   }, [mobileOpen])
 
   return (
-    <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md'
-          : 'bg-white/80 backdrop-blur-sm'
-      }`}
-    >
+    <nav className="sticky top-0 z-50 bg-primary border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Left — Logo */}
-          <a href="/" className="flex-shrink-0">
-            <span className="font-headline text-2xl font-bold tracking-tight text-primary select-none">
-              ZOUK
-            </span>
-          </a>
+          {/* Left — placeholder for spacing */}
+          <div />
 
           {/* Center — Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
@@ -55,7 +45,7 @@ export default function Navbar() {
               <a
                 key={link}
                 href="#"
-                className="font-body text-sm uppercase tracking-wider text-primary hover:text-accent-gold transition-colors duration-200 whitespace-nowrap"
+                className="font-body text-sm uppercase tracking-wider text-secondary hover:text-accent-gold transition-colors duration-200 whitespace-nowrap"
               >
                 {link}
               </a>
@@ -67,7 +57,7 @@ export default function Navbar() {
             {/* Search */}
             <button
               aria-label="Search"
-              className="p-2 text-primary hover:text-accent-gold transition-colors duration-200"
+              className="p-2 text-secondary hover:text-accent-gold transition-colors duration-200"
             >
               <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>
                 search
@@ -77,7 +67,7 @@ export default function Navbar() {
             {/* Account */}
             <button
               aria-label="Account"
-              className="p-2 text-primary hover:text-accent-gold transition-colors duration-200 hidden sm:block"
+              className="p-2 text-secondary hover:text-accent-gold transition-colors duration-200 hidden sm:block"
             >
               <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>
                 person
@@ -87,7 +77,7 @@ export default function Navbar() {
             {/* Cart */}
             <button
               aria-label="Cart"
-              className="p-2 text-primary hover:text-accent-gold transition-colors duration-200 relative"
+              className="p-2 text-secondary hover:text-accent-gold transition-colors duration-200 relative"
             >
               <span className="material-symbols-outlined text-[22px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>
                 shopping_bag
@@ -100,7 +90,7 @@ export default function Navbar() {
             {/* Mobile Hamburger */}
             <button
               aria-label="Menu"
-              className="lg:hidden p-2 text-primary hover:text-accent-gold transition-colors duration-200"
+              className="lg:hidden p-2 text-secondary hover:text-accent-gold transition-colors duration-200"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               <span className="material-symbols-outlined text-[24px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>

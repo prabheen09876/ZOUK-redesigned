@@ -1,5 +1,6 @@
 import AnnouncementBar from './components/AnnouncementBar'
 import Navbar from './components/Navbar'
+import BrandHero from './components/BrandHero'
 import Hero from './components/Hero'
 import CategoryGrid from './components/CategoryGrid'
 import ProductGrid from './components/ProductGrid'
@@ -14,6 +15,7 @@ function App() {
     <div className="min-h-screen bg-light-bg">
       <AnnouncementBar />
       <Navbar />
+      <BrandHero />
       <main>
         <Hero />
         <CategoryGrid />
